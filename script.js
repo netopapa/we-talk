@@ -21,7 +21,7 @@ function weTalk(mode) {
     console.log('errorThrown');
     $.ajax({
         type: "GET",
-        url: 'http://' + $('#ip').val() + '/' + mode,
+        url: 'https://' + $('#ip').val() + '/' + mode,
         success: function (result) {
             console.log(result)
             playing ? $('video').get(0).pause() : $('video').get(0).play();
