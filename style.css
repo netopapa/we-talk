@@ -1,0 +1,68 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gugi', cursive;
+  overflow: hidden;
+  height: 100%;
+}
+
+html .pelicula, body .pelicula {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+html video, body video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+html .options, body .options {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  z-index: 100;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  opacity: 1;
+}
+
+html .options.notshow, body .options.notshow {
+  opacity: 0;
+}
+
+html .options input, body .options input {
+  border-radius: 5px;
+  border: 0;
+  padding: 5px 8px;
+  margin-right: 5px;
+  background-color: #fff;
+  color: #666;
+  width: 190px;
+  height: 54px;
+  font-size: 30px;
+  outline: 0;
+}
+
+html .options i, body .options i {
+  color: #fff;
+  font-size: 54px;
+  cursor: pointer;
+}
+
+@media (max-width: 780px) {
+  video {
+    left: -100% !important;
+    height: 100% !important;
+    width: auto !important;
+  }
+}
